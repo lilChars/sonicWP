@@ -10,42 +10,31 @@ const reveal = {
   }
 };
 
-const chaosSkills = [
+const skillBlocks = [
   {
     title: "Languages",
-    skills: ["Java", "TypeScript", "JavaScript", "SQL", "Bash"],
-    accent: "gem-blue"
+    items: ["Java", "TypeScript", "JavaScript", "Python", "C#", "Go", "SQL", "Bash"]
   },
   {
-    title: "Frameworks",
-    skills: ["React", "Next.js", "Express", "Spring Boot"],
-    accent: "gem-cyan"
+    title: "Frontend & App",
+    items: ["React", "Next.js", "Tailwind", "Framer Motion", "Responsive UI", "State Management"]
   },
   {
-    title: "Backend",
-    skills: ["REST APIs", "Auth", "Validation", "Microservices"],
-    accent: "gem-amber"
+    title: "Backend & APIs",
+    items: ["Node.js", "Express", "Spring Boot", "REST APIs", "Auth", "Validation", "Microservices"]
   },
   {
-    title: "Cloud",
-    skills: ["AWS", "GCP", "Docker", "Serverless"],
-    accent: "gem-violet"
+    title: "Cloud & DevOps",
+    items: ["Azure", "GCP", "AWS", "Docker", "Kubernetes", "CI/CD", "GitHub Actions", "Terraform"]
   },
   {
-    title: "Databases",
-    skills: ["PostgreSQL", "MySQL", "Redis", "Data Modeling"],
-    accent: "gem-emerald"
+    title: "Data & Storage",
+    items: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Data Modeling", "Query Optimization"]
   },
   {
-    title: "CI/CD",
-    skills: ["GitHub Actions", "Pipelines", "Testing", "Releases"],
-    accent: "gem-ruby"
+    title: "Architecture & Quality",
+    items: ["System Design", "Scalability", "Observability", "Testing", "Performance", "Reliability"]
   },
-  {
-    title: "Architecture",
-    skills: ["System Design", "Scalability", "Observability", "Performance"],
-    accent: "gem-silver"
-  }
 ];
 
 function SectionTitle({ eyebrow, title }) {
@@ -61,7 +50,6 @@ export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
   const [photoMissing, setPhotoMissing] = useState(false);
-  const [activeGem, setActiveGem] = useState(6);
 
   const photoSources = [
     "/images/carlos-photo.jpg",
@@ -304,30 +292,58 @@ export default function App() {
           className="py-14"
         >
           <SectionTitle eyebrow="SKILLS" title="Core stack." />
-          <div className="chaos-grid">
-            {chaosSkills.map((gem, index) => (
-              <button
-                key={gem.title}
-                type="button"
-                onClick={() => setActiveGem((prev) => (prev === index ? -1 : index))}
-                aria-pressed={activeGem === index}
-                className={`chaos-gem chaos-gem-${index + 1} ${gem.accent} ${activeGem === index ? "is-active" : ""}`}
+          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            {skillBlocks.map((block) => (
+              <article
+                key={block.title}
+                className="rounded-2xl border border-white/15 bg-gradient-to-b from-white/10 to-white/5 p-5 shadow-neon"
               >
-                <div className="chaos-gem-crystal">
-                  <div className="chaos-gem-inner">
-                    <h3 className="chaos-gem-title">{gem.title}</h3>
-                    {activeGem === index ? (
-                      <ul className="chaos-skill-list">
-                        {gem.skills.map((skill) => (
-                          <li key={skill}>{skill}</li>
-                        ))}
-                      </ul>
-                    ) : (
-                      <p className="chaos-gem-hint">Click to expand</p>
-                    )}
-                  </div>
-                </div>
-              </button>
+                <h3 className="text-base font-extrabold text-white">{block.title}</h3>
+                <ul className="mt-3 space-y-2 text-sm text-slate-300">
+                  {block.items.map((item) => (
+                    <li key={item}>• {item}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-8 flex flex-wrap gap-2">
+            {[
+              "Java",
+              "TypeScript",
+              "JavaScript",
+              "Python",
+              "C#",
+              "Go",
+              "React",
+              "Next.js",
+              "Node.js",
+              "Express",
+              "Spring Boot",
+              "PostgreSQL",
+              "MySQL",
+              "MongoDB",
+              "Redis",
+              "Azure",
+              "GCP",
+              "AWS",
+              "Docker",
+              "Kubernetes",
+              "Terraform",
+              "GitHub Actions",
+              "CI/CD",
+              "System Design",
+              "Observability",
+              "Microservices",
+              "REST APIs",
+              "Auth",
+              "Testing",
+              "Performance"
+            ].map((tag) => (
+              <span key={tag} className="rounded-full border border-sky-300/30 bg-sky-300/10 px-3 py-1 text-xs font-bold text-sky-100">
+                {tag}
+              </span>
             ))}
           </div>
         </motion.section>
