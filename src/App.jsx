@@ -79,7 +79,7 @@ export default function App() {
         <nav className="mx-auto flex w-[92%] max-w-6xl items-center justify-between py-4">
           <a href="#home" className="flex items-center gap-2 text-white">
             <span className="ring-outline h-5 w-5" />
-            <span className="font-display text-sm tracking-wide">Carlos.dev</span>
+            <span className="font-display text-sm tracking-wide">BuiltForSpeed.dev</span>
           </a>
           <ul className="hidden items-center gap-6 text-sm font-bold text-slate-200 md:flex">
             <li><a className="hover:text-white" href="#about" onClick={closeMenu}>About</a></li>
@@ -131,7 +131,7 @@ export default function App() {
           >
             <p className="mb-4 text-xs font-extrabold tracking-[0.22em] text-skyPulse">FULL STACK DEVELOPER</p>
             <h1 className="max-w-[14ch] font-display text-4xl leading-[1.06] text-white sm:text-5xl lg:text-6xl">
-              I'm Carlos Rojas, a full stack developer built for speed.
+              Full stack developer, built for speed.
             </h1>
             <p className="mt-5 max-w-2xl text-base text-slate-300 sm:text-lg">
               My workflow is Sonic-inspired: move fast, stay precise, and keep momentum alive.
@@ -330,7 +330,7 @@ export default function App() {
       </main>
 
       <footer className="mx-auto w-[92%] max-w-6xl border-t border-white/10 py-8 text-sm text-slate-400">
-        <p>© {new Date().getFullYear()} Carlos. Built for speed.</p>
+        <p>© {new Date().getFullYear()} Built for speed.</p>
       </footer>
     </>
   );
