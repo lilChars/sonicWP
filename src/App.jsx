@@ -13,19 +13,19 @@ const reveal = {
 const skillBlocks = [
   {
     title: "Frontend",
-    items: ["React / Next.js", "TypeScript", "Arquitectura CSS", "Motion UI"]
+    items: ["React / Next.js", "TypeScript", "CSS Architecture", "Motion UI"]
   },
   {
     title: "Backend",
-    items: ["Node.js / Express", "REST APIs", "Autenticacion", "Validaciones"]
+    items: ["Node.js / Express", "REST APIs", "Authentication", "Validation"]
   },
   {
     title: "Data",
-    items: ["PostgreSQL / MySQL", "Modelado", "Queries optimizadas", "Migraciones"]
+    items: ["PostgreSQL / MySQL", "Data Modeling", "Optimized Queries", "Migrations"]
   },
   {
     title: "Quality",
-    items: ["Performance budget", "SEO tecnico", "Accesibilidad", "Deploy continuo"]
+    items: ["Performance Budget", "Technical SEO", "Accessibility", "Continuous Deploy"]
   }
 ];
 
@@ -60,7 +60,7 @@ export default function App() {
         href="#main"
         className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-white focus:px-3 focus:py-2 focus:text-black"
       >
-        Saltar al contenido
+        Skip to content
       </a>
 
       <div className="pointer-events-none fixed inset-0 overflow-hidden" aria-hidden="true">
@@ -76,10 +76,10 @@ export default function App() {
             <span className="font-display text-sm tracking-wide">Carlos.dev</span>
           </a>
           <ul className="hidden items-center gap-6 text-sm font-bold text-slate-200 md:flex">
-            <li><a className="hover:text-white" href="#about" onClick={closeMenu}>Sobre mi</a></li>
+            <li><a className="hover:text-white" href="#about" onClick={closeMenu}>About</a></li>
             <li><a className="hover:text-white" href="#dna" onClick={closeMenu}>Sonic DNA</a></li>
             <li><a className="hover:text-white" href="#skills" onClick={closeMenu}>Skills</a></li>
-            <li><a className="hover:text-white" href="#contact" onClick={closeMenu}>Contacto</a></li>
+            <li><a className="hover:text-white" href="#contact" onClick={closeMenu}>Contact</a></li>
           </ul>
           <button
             type="button"
@@ -94,7 +94,7 @@ export default function App() {
             href="#contact"
             className="hidden rounded-lg border border-white/20 px-3 py-2 text-xs font-extrabold tracking-wide text-white hover:border-skyPulse md:inline-flex"
           >
-            Hablemos
+            Let's Talk
           </a>
         </nav>
         <motion.div
@@ -107,10 +107,10 @@ export default function App() {
           className="mx-auto w-[92%] max-w-6xl overflow-hidden md:hidden"
         >
           <ul className="mb-3 space-y-2 rounded-2xl border border-white/10 bg-white/5 p-3 text-sm font-bold text-slate-100">
-            <li><a className="block rounded-lg px-3 py-2 hover:bg-white/10" href="#about" onClick={closeMenu}>Sobre mi</a></li>
+            <li><a className="block rounded-lg px-3 py-2 hover:bg-white/10" href="#about" onClick={closeMenu}>About</a></li>
             <li><a className="block rounded-lg px-3 py-2 hover:bg-white/10" href="#dna" onClick={closeMenu}>Sonic DNA</a></li>
             <li><a className="block rounded-lg px-3 py-2 hover:bg-white/10" href="#skills" onClick={closeMenu}>Skills</a></li>
-            <li><a className="block rounded-lg px-3 py-2 hover:bg-white/10" href="#contact" onClick={closeMenu}>Contacto</a></li>
+            <li><a className="block rounded-lg px-3 py-2 hover:bg-white/10" href="#contact" onClick={closeMenu}>Contact</a></li>
           </ul>
         </motion.div>
       </header>
@@ -125,24 +125,24 @@ export default function App() {
           >
             <p className="mb-4 text-xs font-extrabold tracking-[0.22em] text-skyPulse">FULL STACK DEVELOPER</p>
             <h1 className="max-w-[14ch] font-display text-4xl leading-[1.06] text-white sm:text-5xl lg:text-6xl">
-              Soy Carlos Rojas, programador full stack con mentalidad de velocidad.
+              I'm Carlos Rojas, a full stack developer built for speed.
             </h1>
             <p className="mt-5 max-w-2xl text-base text-slate-300 sm:text-lg">
-              Mi estilo esta inspirado en Sonic: avanzar rapido, mantener precision tecnica y no perder momentum.
-              Construyo experiencias web limpias, responsivas y enfocadas en personas reales.
+              My workflow is Sonic-inspired: move fast, stay precise, and keep momentum alive.
+              I build clean, responsive web experiences designed for real people and real outcomes.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href="#about"
                 className="speed-sheen rounded-xl bg-gradient-to-r from-cobalt to-skyPulse px-5 py-3 text-sm font-extrabold text-white shadow-neon"
               >
-                Conocer mi perfil
+                Explore My Profile
               </a>
               <a
                 href="#contact"
                 className="rounded-xl border border-white/20 bg-white/5 px-5 py-3 text-sm font-extrabold text-white hover:border-ringGold"
               >
-                Contacto directo
+                Direct Contact
               </a>
             </div>
           </motion.div>
@@ -155,8 +155,8 @@ export default function App() {
             className="glass rounded-3xl p-6 shadow-neon"
           >
             <div className="rounded-2xl border border-ringGold/45 bg-gradient-to-br from-cobalt/25 via-cobalt/10 to-transparent p-5">
-              <p className="text-xs font-extrabold tracking-[0.2em] text-ringGold">MODO BOOST</p>
-              <p className="mt-2 text-xl font-extrabold text-white">Entrega rapida sin sacrificar calidad</p>
+              <p className="text-xs font-extrabold tracking-[0.2em] text-ringGold">BOOST MODE</p>
+              <p className="mt-2 text-xl font-extrabold text-white">Fast delivery without cutting quality</p>
               <div className="mt-4 h-2.5 w-full overflow-hidden rounded-full bg-white/15">
                 <motion.div
                   initial={{ width: "0%" }}
@@ -167,13 +167,12 @@ export default function App() {
                 />
               </div>
             </div>
-
             <div className="mt-4 grid grid-cols-2 gap-3">
               {[
                 ["Full Stack", "Frontend + Backend"],
-                ["Remote", "Latam / Global"],
-                ["Clean Code", "Escalable y mantenible"],
-                ["UX First", "Claridad y usabilidad"]
+                ["Remote", "LATAM / Global"],
+                ["Clean Code", "Scalable and maintainable"],
+                ["UX First", "Clarity and usability"]
               ].map(([k, v]) => (
                 <article key={k} className="rounded-xl border border-white/15 bg-white/5 p-3">
                   <h3 className="font-display text-sm text-white">{k}</h3>
@@ -192,15 +191,16 @@ export default function App() {
           viewport={{ once: true, amount: 0.2 }}
           className="py-14"
         >
-          <SectionTitle eyebrow="SOBRE MI" title="Codigo con ritmo, producto con impacto real." />
+          <SectionTitle eyebrow="ABOUT ME" title="Code with rhythm, products with real impact." />
           <div className="grid gap-4 md:grid-cols-2">
             <p className="glass rounded-2xl p-5 text-slate-300">
-              Soy Full Stack Developer y construyo soluciones web enfocadas en experiencia, rendimiento y resultados de negocio.
-              Trabajo desde la idea hasta produccion, cuidando estructura tecnica y claridad visual.
+              I'm a Full Stack Developer building web solutions focused on user experience, performance,
+              and measurable business results. I work from concept to production with technical structure
+              and visual clarity in every detail.
             </p>
             <p className="glass rounded-2xl p-5 text-slate-300">
-              Mi enfoque combina ejecucion rapida con calidad sostenible: componentes reutilizables, SEO tecnico, accesibilidad y
-              decisiones de producto aterrizadas a objetivos concretos.
+              My approach blends rapid execution with sustainable quality: reusable components,
+              technical SEO, accessibility, and product decisions grounded in clear objectives.
             </p>
           </div>
         </motion.section>
@@ -213,20 +213,20 @@ export default function App() {
           viewport={{ once: true, amount: 0.2 }}
           className="py-14"
         >
-          <SectionTitle eyebrow="SONIC DNA" title="Mi forma de programar: velocidad, precision y momentum." />
+          <SectionTitle eyebrow="SONIC DNA" title="How I build: speed, precision, and relentless momentum." />
           <div className="grid gap-4 md:grid-cols-3">
             {[
               {
-                title: "Velocidad con foco",
-                text: "Itero rapido, entrego bloques funcionales y mantengo direccion tecnica clara en cada sprint."
+                title: "Speed with focus",
+                text: "I iterate fast, ship functional blocks early, and keep technical direction sharp in every sprint."
               },
               {
-                title: "Precision tecnica",
-                text: "Escribo codigo limpio y semantico, priorizando mantenibilidad, accesibilidad y buen rendimiento."
+                title: "Technical precision",
+                text: "I write clean, semantic code with maintainability, accessibility, and performance as non-negotiables."
               },
               {
-                title: "Momentum constante",
-                text: "Evito friccion innecesaria: decisiones simples, comunicacion directa y mejora continua."
+                title: "Constant momentum",
+                text: "I remove unnecessary friction through simple decisions, direct communication, and continuous improvement."
               }
             ].map((item) => (
               <article
@@ -248,7 +248,7 @@ export default function App() {
           viewport={{ once: true, amount: 0.2 }}
           className="py-14"
         >
-          <SectionTitle eyebrow="HABILIDADES" title="Stack listo para productos modernos y escalables." />
+          <SectionTitle eyebrow="SKILLS" title="A stack tuned for modern and scalable products." />
           <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
             {skillBlocks.map((block) => (
               <article
@@ -274,8 +274,8 @@ export default function App() {
               "PostgreSQL",
               "Tailwind",
               "Framer Motion",
-              "SEO Tecnico",
-              "Accesibilidad"
+              "Technical SEO",
+              "Accessibility"
             ].map((tag) => (
               <span key={tag} className="rounded-full border border-sky-300/30 bg-sky-300/10 px-3 py-1 text-xs font-bold text-sky-100">
                 {tag}
@@ -292,16 +292,17 @@ export default function App() {
           viewport={{ once: true, amount: 0.2 }}
           className="py-14"
         >
-          <SectionTitle eyebrow="CONTACTO" title="Informacion directa para hablar conmigo." />
+          <SectionTitle eyebrow="CONTACT" title="Direct lines to connect and build something great." />
           <div className="grid gap-4 lg:grid-cols-[1.2fr_1fr]">
             <div className="glass rounded-3xl p-6">
               <p className="max-w-3xl text-slate-300">
-                Si buscas un developer full stack que combine velocidad con calidad, escribeme.
-                Te respondo con enfoque claro, pasos concretos y buena comunicacion tecnica.
+                If you need a full stack developer who combines speed with quality, let's talk.
+                You'll get clear direction, concrete next steps, and strong technical communication.
+                As I like to say: "Gotta go fast, but never break the user experience."
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <a href="mailto:carlosluzumbero@gmail.com" className="rounded-xl bg-gradient-to-r from-cobalt to-skyPulse px-5 py-3 text-sm font-extrabold text-white shadow-neon">
-                  Enviar correo
+                  Send Email
                 </a>
                 <a href="https://github.com/lilChars" target="_blank" rel="noreferrer" className="rounded-xl border border-white/20 px-5 py-3 text-sm font-extrabold text-white">
                   GitHub
@@ -318,8 +319,8 @@ export default function App() {
                 <li><span className="font-bold text-ringGold">Email:</span> carlosluzumbero@gmail.com</li>
                 <li><span className="font-bold text-ringGold">LinkedIn:</span> linkedin.com/in/cbrojas777</li>
                 <li><span className="font-bold text-ringGold">GitHub:</span> github.com/lilChars</li>
-                <li><span className="font-bold text-ringGold">Ubicacion:</span> Remoto (Latam)</li>
-                <li><span className="font-bold text-ringGold">Disponibilidad:</span> Abierto a oportunidades</li>
+                <li><span className="font-bold text-ringGold">Location:</span> Remote (LATAM)</li>
+                <li><span className="font-bold text-ringGold">Availability:</span> Open to opportunities</li>
               </ul>
             </aside>
           </div>
