@@ -10,22 +10,41 @@ const reveal = {
   }
 };
 
-const skillBlocks = [
+const chaosSkills = [
   {
-    title: "Product Engineering",
-    items: ["Web + App Interfaces", "TypeScript", "Modular Architecture", "Design-to-Code"]
+    title: "Backend Core",
+    detail: "Node.js, API architecture, authentication, and resilient service boundaries.",
+    accent: "gem-blue"
   },
   {
-    title: "Backend & APIs",
-    items: ["Node.js / Express", "REST + Service Design", "Auth / Security", "Validation + Observability"]
+    title: "Cloud Platforms",
+    detail: "Production deployments, infrastructure strategy, reliability, and scaling patterns.",
+    accent: "gem-cyan"
   },
   {
-    title: "Cloud & Systems",
-    items: ["Cloud Deployments", "System Design", "Scalability Patterns", "Reliability"]
+    title: "System Design",
+    detail: "Distributed thinking, data flow modeling, and decisions that survive growth.",
+    accent: "gem-amber"
+  },
+  {
+    title: "Frontend Apps",
+    detail: "Modern interfaces, state architecture, interaction quality, and performance budgets.",
+    accent: "gem-violet"
+  },
+  {
+    title: "Data & Storage",
+    detail: "SQL modeling, query optimization, schema evolution, and consistency tradeoffs.",
+    accent: "gem-emerald"
   },
   {
     title: "Software Delivery",
-    items: ["CI/CD Pipelines", "Testing Strategy", "Performance Engineering", "Product Iteration"]
+    detail: "CI/CD, automated checks, observability, and release workflows with low friction.",
+    accent: "gem-ruby"
+  },
+  {
+    title: "Product Execution",
+    detail: "From idea to shipped software with technical clarity and measurable outcomes.",
+    accent: "gem-silver"
   }
 ];
 
@@ -288,22 +307,17 @@ export default function App() {
           className="py-14"
         >
           <SectionTitle eyebrow="SKILLS" title="Capabilities across product, backend, cloud, and delivery." />
-          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-            {skillBlocks.map((block) => (
-              <article
-                key={block.title}
-                className="speed-sheen rounded-2xl border border-white/15 bg-gradient-to-b from-white/10 to-white/5 p-5 shadow-neon"
-              >
-                <h3 className="text-base font-extrabold text-white">{block.title}</h3>
-                <ul className="mt-3 space-y-2 text-sm text-slate-300">
-                  {block.items.map((item) => (
-                    <li key={item}>• {item}</li>
-                  ))}
-                </ul>
+          <div className="chaos-grid">
+            {chaosSkills.map((gem) => (
+              <article key={gem.title} className={`chaos-gem speed-sheen ${gem.accent}`}>
+                <div className="chaos-gem-inner">
+                  <h3 className="chaos-gem-title">{gem.title}</h3>
+                  <p className="chaos-gem-text">{gem.detail}</p>
+                </div>
               </article>
             ))}
           </div>
-          <div className="mt-6 flex flex-wrap gap-2">
+          <div className="mt-8 flex flex-wrap gap-2">
             {[
               "React",
               "Next.js",

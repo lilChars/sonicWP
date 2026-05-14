@@ -195,6 +195,129 @@ body {
   transform: translateX(120%);
 }
 
+.chaos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.chaos-gem {
+  position: relative;
+  min-height: 220px;
+  clip-path: polygon(50% 0%, 92% 22%, 100% 50%, 92% 78%, 50% 100%, 8% 78%, 0% 50%, 8% 22%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 18px 34px rgba(6, 14, 35, 0.35);
+  transition: transform 280ms ease, box-shadow 280ms ease;
+}
+
+.chaos-gem:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 22px 42px rgba(6, 14, 35, 0.5);
+}
+
+.chaos-gem-inner {
+  height: 100%;
+  padding: 1.4rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.7rem;
+}
+
+.chaos-gem-title {
+  margin: 0;
+  font-family: "Sora", ui-sans-serif, system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #f5faff;
+}
+
+.chaos-gem-text {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.45;
+  color: rgba(223, 237, 255, 0.88);
+}
+
+.gem-blue {
+  background: linear-gradient(155deg, rgba(65, 121, 255, 0.4), rgba(12, 26, 56, 0.78));
+}
+
+.gem-cyan {
+  background: linear-gradient(155deg, rgba(83, 198, 255, 0.34), rgba(8, 31, 58, 0.78));
+}
+
+.gem-amber {
+  background: linear-gradient(155deg, rgba(232, 184, 78, 0.35), rgba(47, 29, 8, 0.8));
+}
+
+.gem-violet {
+  background: linear-gradient(155deg, rgba(135, 107, 255, 0.35), rgba(24, 20, 56, 0.8));
+}
+
+.gem-emerald {
+  background: linear-gradient(155deg, rgba(57, 217, 138, 0.34), rgba(10, 43, 29, 0.8));
+}
+
+.gem-ruby {
+  background: linear-gradient(155deg, rgba(255, 93, 120, 0.32), rgba(61, 13, 23, 0.82));
+}
+
+.gem-silver {
+  background: linear-gradient(155deg, rgba(185, 203, 225, 0.32), rgba(18, 28, 44, 0.82));
+}
+
+@media (min-width: 768px) {
+  .chaos-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.1rem;
+  }
+
+  .chaos-gem {
+    min-height: 240px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .chaos-grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .chaos-gem {
+    min-height: 246px;
+  }
+
+  .chaos-gem:nth-child(1) {
+    grid-column: 2 / span 3;
+  }
+
+  .chaos-gem:nth-child(2) {
+    grid-column: 5 / span 3;
+  }
+
+  .chaos-gem:nth-child(3) {
+    grid-column: 8 / span 3;
+  }
+
+  .chaos-gem:nth-child(4) {
+    grid-column: 1 / span 3;
+  }
+
+  .chaos-gem:nth-child(5) {
+    grid-column: 4 / span 3;
+  }
+
+  .chaos-gem:nth-child(6) {
+    grid-column: 7 / span 3;
+  }
+
+  .chaos-gem:nth-child(7) {
+    grid-column: 10 / span 3;
+  }
+}
+
 #mobile-menu {
   transition: height 240ms ease, opacity 240ms ease;
 }
