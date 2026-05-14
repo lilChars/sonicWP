@@ -14,11 +14,11 @@ body,
 
 body {
   margin: 0;
-  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   background:
-    radial-gradient(circle at 12% 10%, rgba(10, 92, 255, 0.4), transparent 40%),
-    radial-gradient(circle at 86% 76%, rgba(23, 194, 255, 0.24), transparent 44%),
-    linear-gradient(180deg, #061128 0%, #030a18 100%);
+    radial-gradient(circle at 12% 10%, rgba(45, 91, 255, 0.36), transparent 42%),
+    radial-gradient(circle at 86% 76%, rgba(98, 181, 255, 0.2), transparent 44%),
+    linear-gradient(180deg, #0c1830 0%, #070f21 100%);
   color: #f4f9ff;
   background-attachment: fixed;
 }
@@ -27,8 +27,8 @@ body {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 20% 28%, rgba(76, 232, 255, 0.2), transparent 46%),
-    radial-gradient(circle at 78% 25%, rgba(23, 194, 255, 0.15), transparent 42%);
+    radial-gradient(circle at 20% 28%, rgba(140, 196, 255, 0.16), transparent 46%),
+    radial-gradient(circle at 78% 25%, rgba(98, 181, 255, 0.14), transparent 42%);
 }
 
 .greenhill-cloud {
@@ -63,32 +63,16 @@ body {
   bottom: 8%;
   width: min(1300px, 95vw);
   height: 240px;
-  background:
-    linear-gradient(0deg, rgba(17, 124, 63, 0.72), rgba(28, 166, 87, 0.45)),
-    repeating-linear-gradient(
-      45deg,
-      rgba(42, 91, 52, 0.33) 0,
-      rgba(42, 91, 52, 0.33) 16px,
-      rgba(68, 132, 72, 0.25) 16px,
-      rgba(68, 132, 72, 0.25) 32px
-    );
-  opacity: 0.32;
+  background: linear-gradient(0deg, rgba(21, 61, 117, 0.5), rgba(47, 109, 196, 0.34));
+  opacity: 0.26;
 }
 
 .greenhill-hill-near {
   bottom: -2%;
   width: min(1650px, 114vw);
   height: 290px;
-  background:
-    linear-gradient(0deg, rgba(43, 168, 78, 0.7), rgba(38, 214, 112, 0.52)),
-    repeating-linear-gradient(
-      -45deg,
-      rgba(42, 98, 56, 0.34) 0,
-      rgba(42, 98, 56, 0.34) 14px,
-      rgba(80, 150, 77, 0.22) 14px,
-      rgba(80, 150, 77, 0.22) 28px
-    );
-  opacity: 0.28;
+  background: linear-gradient(0deg, rgba(23, 74, 138, 0.44), rgba(74, 148, 234, 0.28));
+  opacity: 0.24;
 }
 
 .greenhill-ground {
@@ -97,16 +81,8 @@ body {
   right: 0;
   bottom: 0;
   height: 76px;
-  background:
-    linear-gradient(180deg, rgba(31, 191, 89, 0.1), rgba(31, 191, 89, 0.34)),
-    repeating-linear-gradient(
-      90deg,
-      rgba(168, 102, 49, 0.24) 0,
-      rgba(168, 102, 49, 0.24) 20px,
-      rgba(128, 78, 35, 0.28) 20px,
-      rgba(128, 78, 35, 0.28) 40px
-    );
-  opacity: 0.35;
+  background: linear-gradient(180deg, rgba(93, 156, 232, 0.08), rgba(40, 89, 161, 0.26));
+  opacity: 0.3;
 }
 
 .hero-ring-stage {

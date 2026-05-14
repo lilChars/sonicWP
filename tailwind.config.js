@@ -4,15 +4,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        cobalt: "#0A5CFF",
-        skyPulse: "#17C2FF",
-        ringGold: "#FFC93C",
-        emerald: "#2AF5C1",
-        abyss: "#041226"
+        cobalt: "#2D5BFF",
+        skyPulse: "#62B5FF",
+        ringGold: "#E8B84E",
+        emerald: "#39D98A",
+        abyss: "#0A1429"
       },
       fontFamily: {
-        display: ["Bungee", "ui-sans-serif", "system-ui", "sans-serif"],
-        body: ["Manrope", "ui-sans-serif", "system-ui", "sans-serif"]
+        display: ["Sora", "ui-sans-serif", "system-ui", "sans-serif"],
+        body: ["Plus Jakarta Sans", "ui-sans-serif", "system-ui", "sans-serif"]
       },
       boxShadow: {
         neon: "0 0 0 1px rgba(23,194,255,.22), 0 18px 42px rgba(4,18,38,.45)",

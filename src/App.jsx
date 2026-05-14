@@ -12,20 +12,20 @@ const reveal = {
 
 const skillBlocks = [
   {
-    title: "Frontend",
-    items: ["React / Next.js", "TypeScript", "CSS Architecture", "Motion UI"]
+    title: "Product Engineering",
+    items: ["Web + App Interfaces", "TypeScript", "Modular Architecture", "Design-to-Code"]
   },
   {
-    title: "Backend",
-    items: ["Node.js / Express", "REST APIs", "Authentication", "Validation"]
+    title: "Backend & APIs",
+    items: ["Node.js / Express", "REST + Service Design", "Auth / Security", "Validation + Observability"]
   },
   {
-    title: "Data",
-    items: ["PostgreSQL / MySQL", "Data Modeling", "Optimized Queries", "Migrations"]
+    title: "Cloud & Systems",
+    items: ["Cloud Deployments", "System Design", "Scalability Patterns", "Reliability"]
   },
   {
-    title: "Quality",
-    items: ["Performance Budget", "Technical SEO", "Accessibility", "Continuous Deploy"]
+    title: "Software Delivery",
+    items: ["CI/CD Pipelines", "Testing Strategy", "Performance Engineering", "Product Iteration"]
   }
 ];
 
@@ -140,18 +140,18 @@ export default function App() {
           >
             <p className="mb-4 text-xs font-extrabold tracking-[0.22em] text-skyPulse">FULL STACK DEVELOPER</p>
             <h1 className="max-w-[14ch] font-display text-4xl leading-[1.06] text-white sm:text-5xl lg:text-6xl">
-              Full stack developer, built for speed.
+              Full stack engineer for software, cloud, and products.
             </h1>
             <p className="mt-5 max-w-2xl text-base text-slate-300 sm:text-lg">
-              My workflow is Sonic-inspired: move fast, stay precise, and keep momentum alive.
-              I build clean, responsive web experiences designed for real people and real outcomes.
+              I build beyond websites: backend services, cloud-ready architectures, scalable systems,
+              and product experiences from concept to production.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href="#about"
                 className="speed-sheen rounded-xl bg-gradient-to-r from-cobalt to-skyPulse px-5 py-3 text-sm font-extrabold text-white shadow-neon"
               >
-                Explore My Profile
+                Explore Experience
               </a>
               <a
                 href="#contact"
@@ -208,10 +208,10 @@ export default function App() {
             </div>
             <div className="mt-4 grid grid-cols-2 gap-3">
               {[
-                ["Full Stack", "Frontend + Backend"],
-                ["Remote", "LATAM / Global"],
-                ["Clean Code", "Scalable and maintainable"],
-                ["UX First", "Clarity and usability"]
+                ["Scope", "Apps + Platforms"],
+                ["Cloud", "Deploy and Operate"],
+                ["Architecture", "Scalable by design"],
+                ["Delivery", "From idea to production"]
               ].map(([k, v]) => (
                 <article key={k} className="rounded-xl border border-white/15 bg-white/5 p-3">
                   <h3 className="font-display text-sm text-white">{k}</h3>
@@ -230,16 +230,16 @@ export default function App() {
           viewport={{ once: true, amount: 0.2 }}
           className="py-14"
         >
-          <SectionTitle eyebrow="ABOUT ME" title="Code with rhythm, products with real impact." />
+          <SectionTitle eyebrow="ABOUT ME" title="Software thinking, product execution, real outcomes." />
           <div className="grid gap-4 md:grid-cols-2">
             <p className="glass rounded-2xl p-5 text-slate-300">
-              I'm a Full Stack Developer building web solutions focused on user experience, performance,
-              and measurable business results. I work from concept to production with technical structure
-              and visual clarity in every detail.
+              I design and build software across the full lifecycle: architecture, backend services,
+              frontend experiences, and deployment. My focus is solving business problems with robust,
+              maintainable systems.
             </p>
             <p className="glass rounded-2xl p-5 text-slate-300">
-              My approach blends rapid execution with sustainable quality: reusable components,
-              technical SEO, accessibility, and product decisions grounded in clear objectives.
+              I work with a systems mindset: clear boundaries, reliable integrations, cloud-aware decisions,
+              and product delivery that balances speed, quality, and long-term scalability.
             </p>
           </div>
         </motion.section>
@@ -257,15 +257,15 @@ export default function App() {
             {[
               {
                 title: "Speed with focus",
-                text: "I iterate fast, ship functional blocks early, and keep technical direction sharp in every sprint."
+                text: "I ship fast while protecting architecture quality, so products can evolve without rewrites."
               },
               {
                 title: "Technical precision",
-                text: "I write clean, semantic code with maintainability, accessibility, and performance as non-negotiables."
+                text: "From API contracts to data modeling and cloud deployment, details are handled with engineering discipline."
               },
               {
                 title: "Constant momentum",
-                text: "I remove unnecessary friction through simple decisions, direct communication, and continuous improvement."
+                text: "I keep teams moving with practical decisions, direct communication, and iterative delivery."
               }
             ].map((item) => (
               <article
@@ -287,7 +287,7 @@ export default function App() {
           viewport={{ once: true, amount: 0.2 }}
           className="py-14"
         >
-          <SectionTitle eyebrow="SKILLS" title="A stack tuned for modern and scalable products." />
+          <SectionTitle eyebrow="SKILLS" title="Capabilities across product, backend, cloud, and delivery." />
           <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
             {skillBlocks.map((block) => (
               <article
@@ -311,10 +311,10 @@ export default function App() {
               "Node.js",
               "Express",
               "PostgreSQL",
-              "Tailwind",
-              "Framer Motion",
-              "Technical SEO",
-              "Accessibility"
+              "System Design",
+              "Cloud Architecture",
+              "CI/CD",
+              "Observability"
             ].map((tag) => (
               <span key={tag} className="rounded-full border border-sky-300/30 bg-sky-300/10 px-3 py-1 text-xs font-bold text-sky-100">
                 {tag}
@@ -335,9 +335,9 @@ export default function App() {
           <div className="grid gap-4">
             <div className="glass rounded-3xl p-6">
               <p className="max-w-3xl text-slate-300">
-                If you need a full stack developer who combines speed with quality, let's talk.
-                You'll get clear direction, concrete next steps, and strong technical communication.
-                As I like to say: "Gotta go fast, but never break the user experience."
+                If you need someone who can design systems, build software, and ship reliable products,
+                let's talk. I can contribute across backend, cloud, architecture, and product engineering
+                with clear communication and execution speed.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <a href="mailto:carlosluzumbero@gmail.com" className="rounded-xl bg-gradient-to-r from-cobalt to-skyPulse px-5 py-3 text-sm font-extrabold text-white shadow-neon">
