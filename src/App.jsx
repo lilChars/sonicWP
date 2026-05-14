@@ -64,6 +64,12 @@ export default function App() {
       </a>
 
       <div className="pointer-events-none fixed inset-0 overflow-hidden" aria-hidden="true">
+        <div className="greenhill-sky" />
+        <div className="greenhill-cloud greenhill-cloud-a" />
+        <div className="greenhill-cloud greenhill-cloud-b" />
+        <div className="greenhill-hill greenhill-hill-far" />
+        <div className="greenhill-hill greenhill-hill-near" />
+        <div className="greenhill-ground" />
         <div className="absolute -left-28 top-20 h-72 w-72 ring-outline animate-ringSpin opacity-35" />
         <div className="absolute -right-36 bottom-16 h-96 w-96 ring-outline animate-ringSpin opacity-25 [animation-duration:26s]" />
         <div className="absolute left-1/2 top-32 h-24 w-[34rem] -translate-x-1/2 rounded-full bg-speedline opacity-25 blur-md" />
@@ -154,6 +160,13 @@ export default function App() {
             viewport={{ once: true, amount: 0.25 }}
             className="glass rounded-3xl p-6 shadow-neon"
           >
+            <div className="hero-ring-stage mb-5">
+              <div className="hero-power-ring">
+                <div className="hero-profile-avatar" style={{ backgroundImage: "url('/images/carlos-photo.jpg')" }} />
+              </div>
+              <div className="hero-speed-lines" />
+            </div>
+
             <div className="rounded-2xl border border-ringGold/45 bg-gradient-to-br from-cobalt/25 via-cobalt/10 to-transparent p-5">
               <p className="text-xs font-extrabold tracking-[0.2em] text-ringGold">BOOST MODE</p>
               <p className="mt-2 text-xl font-extrabold text-white">Fast delivery without cutting quality</p>
