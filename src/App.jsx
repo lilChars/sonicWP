@@ -10,32 +10,6 @@ const reveal = {
   }
 };
 
-const skillBlocks = [
-  {
-    title: "Languages",
-    items: ["Java", "TypeScript", "JavaScript", "Python", "C#", "Go", "SQL", "Bash"]
-  },
-  {
-    title: "Frontend & App",
-    items: ["React", "Next.js", "Tailwind", "Framer Motion", "Responsive UI", "State Management"]
-  },
-  {
-    title: "Backend & APIs",
-    items: ["Node.js", "Express", "Spring Boot", "REST APIs", "Auth", "Validation", "Microservices"]
-  },
-  {
-    title: "Cloud & DevOps",
-    items: ["Azure", "GCP", "AWS", "Docker", "Kubernetes", "CI/CD", "GitHub Actions", "Terraform"]
-  },
-  {
-    title: "Data & Storage",
-    items: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Data Modeling", "Query Optimization"]
-  },
-  {
-    title: "Architecture & Quality",
-    items: ["System Design", "Scalability", "Observability", "Testing", "Performance", "Reliability"]
-  },
-];
 
 function SectionTitle({ eyebrow, title }) {
   return (
@@ -292,21 +266,6 @@ export default function App() {
           className="py-14"
         >
           <SectionTitle eyebrow="SKILLS" title="Core stack." />
-          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-            {skillBlocks.map((block) => (
-              <div key={block.title} className="mb-8">
-                <SectionTitle eyebrow="" title={block.title} />
-                <ul className="grid grid-cols-4 gap-4">
-                  {block.items.map((item) => (
-                    <li key={item} className="text-center">
-                      <img src={`/icons/${item.toLowerCase()}.svg`} alt={item} className="h-8 w-8 mx-auto" />
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-
           <div className="mt-8 flex flex-wrap gap-2">
             {[
               "Java",
