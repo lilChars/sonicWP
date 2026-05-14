@@ -40,6 +40,15 @@ function SectionTitle({ eyebrow, title }) {
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [photoIndex, setPhotoIndex] = useState(0);
+  const [photoMissing, setPhotoMissing] = useState(false);
+
+  const photoSources = [
+    "/images/carlos-photo.jpg",
+    "/images/carlos-photo.jpeg",
+    "/images/carlos-photo.png",
+    "/images/carlos-photo.webp"
+  ];
 
   useEffect(() => {
     const handleResize = () => {
@@ -162,7 +171,24 @@ export default function App() {
           >
             <div className="hero-ring-stage mb-5">
               <div className="hero-power-ring">
-                <div className="hero-profile-avatar" style={{ backgroundImage: "url('/images/carlos-photo.jpg')" }} />
+                <div className="hero-profile-avatar">
+                  {!photoMissing ? (
+                    <img
+                      src={photoSources[photoIndex]}
+                      alt="Profile"
+                      className="hero-profile-image"
+                      onError={() => {
+                        if (photoIndex < photoSources.length - 1) {
+                          setPhotoIndex((prev) => prev + 1);
+                        } else {
+                          setPhotoMissing(true);
+                        }
+                      }}
+                    />
+                  ) : (
+                    <span className="hero-photo-fallback">ADD PHOTO</span>
+                  )}
+                </div>
               </div>
               <div className="hero-speed-lines" />
             </div>

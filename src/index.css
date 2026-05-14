@@ -141,10 +141,25 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 9999px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
   background-color: rgba(2, 11, 29, 0.8);
-  background-position: center;
-  background-size: cover;
   box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.25);
+}
+
+.hero-profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-photo-fallback {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.72);
 }
 
 .hero-speed-lines {
