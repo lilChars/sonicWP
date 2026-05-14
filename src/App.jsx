@@ -293,7 +293,7 @@ export default function App() {
           className="py-14"
         >
           <SectionTitle eyebrow="CONTACT" title="Direct lines to connect and build something great." />
-          <div className="grid gap-4 lg:grid-cols-[1.2fr_1fr]">
+          <div className="grid gap-4">
             <div className="glass rounded-3xl p-6">
               <p className="max-w-3xl text-slate-300">
                 If you need a full stack developer who combines speed with quality, let's talk.
@@ -312,17 +312,6 @@ export default function App() {
                 </a>
               </div>
             </div>
-
-            <aside className="rounded-3xl border border-ringGold/30 bg-gradient-to-b from-ringGold/15 via-white/5 to-white/5 p-6">
-              <h3 className="font-display text-xl text-white">Contact Info</h3>
-              <ul className="mt-4 space-y-3 text-sm text-slate-200">
-                <li><span className="font-bold text-ringGold">Email:</span> carlosluzumbero@gmail.com</li>
-                <li><span className="font-bold text-ringGold">LinkedIn:</span> linkedin.com/in/cbrojas777</li>
-                <li><span className="font-bold text-ringGold">GitHub:</span> github.com/lilChars</li>
-                <li><span className="font-bold text-ringGold">Location:</span> Remote (LATAM)</li>
-                <li><span className="font-bold text-ringGold">Availability:</span> Open to opportunities</li>
-              </ul>
-            </aside>
           </div>
         </motion.section>
       </main>
