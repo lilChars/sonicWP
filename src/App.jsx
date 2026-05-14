@@ -12,38 +12,31 @@ const reveal = {
 
 const chaosSkills = [
   {
-    title: "Backend Core",
-    detail: "Node.js, API architecture, authentication, and resilient service boundaries.",
+    title: "React",
     accent: "gem-blue"
   },
   {
-    title: "Cloud Platforms",
-    detail: "Production deployments, infrastructure strategy, reliability, and scaling patterns.",
+    title: "Next.js",
     accent: "gem-cyan"
   },
   {
-    title: "System Design",
-    detail: "Distributed thinking, data flow modeling, and decisions that survive growth.",
+    title: "TypeScript",
     accent: "gem-amber"
   },
   {
-    title: "Frontend Apps",
-    detail: "Modern interfaces, state architecture, interaction quality, and performance budgets.",
+    title: "Node.js",
     accent: "gem-violet"
   },
   {
-    title: "Data & Storage",
-    detail: "SQL modeling, query optimization, schema evolution, and consistency tradeoffs.",
+    title: "System Design",
     accent: "gem-emerald"
   },
   {
-    title: "Software Delivery",
-    detail: "CI/CD, automated checks, observability, and release workflows with low friction.",
+    title: "Cloud",
     accent: "gem-ruby"
   },
   {
-    title: "Product Execution",
-    detail: "From idea to shipped software with technical clarity and measurable outcomes.",
+    title: "CI/CD",
     accent: "gem-silver"
   }
 ];
@@ -157,13 +150,12 @@ export default function App() {
             whileInView="show"
             viewport={{ once: true, amount: 0.25 }}
           >
-            <p className="mb-4 text-xs font-extrabold tracking-[0.22em] text-skyPulse">FULL STACK DEVELOPER</p>
+            <p className="mb-4 text-xs font-extrabold tracking-[0.22em] text-skyPulse">SUPER SOFTWARE DEVELOPER</p>
             <h1 className="max-w-[14ch] font-display text-4xl leading-[1.06] text-white sm:text-5xl lg:text-6xl">
-              Full stack engineer for software, cloud, and products.
+              Backend, cloud, apps, and scalable software.
             </h1>
             <p className="mt-5 max-w-2xl text-base text-slate-300 sm:text-lg">
-              I build beyond websites: backend services, cloud-ready architectures, scalable systems,
-              and product experiences from concept to production.
+              I design and ship complete software systems, from architecture to production.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
@@ -252,13 +244,10 @@ export default function App() {
           <SectionTitle eyebrow="ABOUT ME" title="Software thinking, product execution, real outcomes." />
           <div className="grid gap-4 md:grid-cols-2">
             <p className="glass rounded-2xl p-5 text-slate-300">
-              I design and build software across the full lifecycle: architecture, backend services,
-              frontend experiences, and deployment. My focus is solving business problems with robust,
-              maintainable systems.
+              I build end-to-end software: architecture, backend, frontend apps, and production delivery.
             </p>
             <p className="glass rounded-2xl p-5 text-slate-300">
-              I work with a systems mindset: clear boundaries, reliable integrations, cloud-aware decisions,
-              and product delivery that balances speed, quality, and long-term scalability.
+              My focus is speed with engineering quality, so systems stay reliable, scalable, and maintainable.
             </p>
           </div>
         </motion.section>
@@ -306,35 +295,16 @@ export default function App() {
           viewport={{ once: true, amount: 0.2 }}
           className="py-14"
         >
-          <SectionTitle eyebrow="SKILLS" title="Capabilities across product, backend, cloud, and delivery." />
+          <SectionTitle eyebrow="SKILLS" title="Core stack." />
           <div className="chaos-grid">
             {chaosSkills.map((gem, index) => (
-              <article key={gem.title} className={`chaos-gem chaos-gem-${index + 1} speed-sheen ${gem.accent}`}>
+              <article key={gem.title} className={`chaos-gem chaos-gem-${index + 1} ${gem.accent}`}>
                 <div className="chaos-gem-crystal">
                   <div className="chaos-gem-inner">
                     <h3 className="chaos-gem-title">{gem.title}</h3>
-                    <p className="chaos-gem-text">{gem.detail}</p>
                   </div>
                 </div>
               </article>
-            ))}
-          </div>
-          <div className="mt-8 flex flex-wrap gap-2">
-            {[
-              "React",
-              "Next.js",
-              "TypeScript",
-              "Node.js",
-              "Express",
-              "PostgreSQL",
-              "System Design",
-              "Cloud Architecture",
-              "CI/CD",
-              "Observability"
-            ].map((tag) => (
-              <span key={tag} className="rounded-full border border-sky-300/30 bg-sky-300/10 px-3 py-1 text-xs font-bold text-sky-100">
-                {tag}
-              </span>
             ))}
           </div>
         </motion.section>
@@ -351,9 +321,7 @@ export default function App() {
           <div className="grid gap-4">
             <div className="glass rounded-3xl p-6">
               <p className="max-w-3xl text-slate-300">
-                If you need someone who can design systems, build software, and ship reliable products,
-                let's talk. I can contribute across backend, cloud, architecture, and product engineering
-                with clear communication and execution speed.
+                Need backend, cloud, system design, or full product execution? Let's build it.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <a href="mailto:carlosluzumbero@gmail.com" className="rounded-xl bg-gradient-to-r from-cobalt to-skyPulse px-5 py-3 text-sm font-extrabold text-white shadow-neon">
