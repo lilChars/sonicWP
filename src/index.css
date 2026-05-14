@@ -204,11 +204,15 @@ body {
 .chaos-gem {
   position: relative;
   aspect-ratio: 1 / 1;
-  transition: transform 280ms ease;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  text-align: inherit;
 }
 
-.chaos-gem:hover {
-  transform: translateY(-4px) scale(1.02);
+.chaos-gem:focus-visible {
+  outline: none;
 }
 
 .chaos-gem-crystal {
@@ -216,36 +220,44 @@ body {
   height: 100%;
   display: grid;
   place-items: center;
+  clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);
+  background: linear-gradient(160deg, var(--gem-a), var(--gem-b));
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.12),
+    0 16px 28px rgba(7, 15, 35, 0.44);
   overflow: hidden;
+  transition: box-shadow 220ms ease, filter 220ms ease;
 }
 
 .chaos-gem-crystal::before {
   content: "";
   position: absolute;
-  inset: 13%;
-  transform: rotate(45deg);
-  border-radius: 16px;
+  inset: 0;
   background:
-    radial-gradient(circle at 28% 26%, rgba(255, 255, 255, 0.5), transparent 34%),
-    linear-gradient(150deg, var(--gem-a), var(--gem-b));
-  border: 1px solid rgba(255, 255, 255, 0.32);
-  box-shadow:
-    inset 0 0 0 1px rgba(255, 255, 255, 0.14),
-    0 18px 30px rgba(7, 15, 35, 0.46),
-    0 0 24px var(--gem-glow);
+    linear-gradient(60deg, transparent 0 46%, rgba(255, 255, 255, 0.22) 50%, transparent 54% 100%),
+    linear-gradient(-60deg, transparent 0 46%, rgba(255, 255, 255, 0.14) 50%, transparent 54% 100%);
+  opacity: 0.9;
 }
 
 .chaos-gem-crystal::after {
   content: "";
   position: absolute;
-  inset: 18%;
-  transform: rotate(45deg);
-  border-radius: 12px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.14), transparent 38%),
-    linear-gradient(90deg, transparent 47%, rgba(255, 255, 255, 0.17) 50%, transparent 53%);
-  mix-blend-mode: screen;
+  inset: 16% 22%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent 72%);
+  filter: blur(8px);
+  opacity: 0.45;
   pointer-events: none;
+}
+
+.chaos-gem:hover .chaos-gem-crystal,
+.chaos-gem:focus-visible .chaos-gem-crystal,
+.chaos-gem.is-active .chaos-gem-crystal {
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.16),
+    0 0 26px var(--gem-glow),
+    0 18px 30px rgba(7, 15, 35, 0.5);
+  filter: saturate(1.08);
 }
 
 .chaos-gem-inner {
@@ -254,6 +266,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  gap: 0.55rem;
   text-align: center;
   position: relative;
   z-index: 2;
@@ -269,6 +283,36 @@ body {
   text-transform: uppercase;
   color: #f5faff;
   text-shadow: 0 1px 8px rgba(5, 12, 26, 0.55);
+}
+
+.chaos-gem-hint {
+  margin: 0;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgba(232, 243, 255, 0.84);
+}
+
+.chaos-skill-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem;
+}
+
+.chaos-skill-list li {
+  padding: 0.2rem 0.45rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(8, 18, 37, 0.35);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: rgba(241, 248, 255, 0.94);
 }
 
 .gem-blue {

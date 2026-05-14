@@ -12,31 +12,38 @@ const reveal = {
 
 const chaosSkills = [
   {
-    title: "React",
+    title: "Languages",
+    skills: ["Java", "TypeScript", "JavaScript", "SQL", "Bash"],
     accent: "gem-blue"
   },
   {
-    title: "Next.js",
+    title: "Frameworks",
+    skills: ["React", "Next.js", "Express", "Spring Boot"],
     accent: "gem-cyan"
   },
   {
-    title: "TypeScript",
+    title: "Backend",
+    skills: ["REST APIs", "Auth", "Validation", "Microservices"],
     accent: "gem-amber"
   },
   {
-    title: "Node.js",
+    title: "Cloud",
+    skills: ["AWS", "GCP", "Docker", "Serverless"],
     accent: "gem-violet"
   },
   {
-    title: "System Design",
+    title: "Databases",
+    skills: ["PostgreSQL", "MySQL", "Redis", "Data Modeling"],
     accent: "gem-emerald"
   },
   {
-    title: "Cloud",
+    title: "CI/CD",
+    skills: ["GitHub Actions", "Pipelines", "Testing", "Releases"],
     accent: "gem-ruby"
   },
   {
-    title: "CI/CD",
+    title: "Architecture",
+    skills: ["System Design", "Scalability", "Observability", "Performance"],
     accent: "gem-silver"
   }
 ];
@@ -54,6 +61,7 @@ export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
   const [photoMissing, setPhotoMissing] = useState(false);
+  const [activeGem, setActiveGem] = useState(6);
 
   const photoSources = [
     "/images/carlos-photo.jpg",
@@ -298,13 +306,28 @@ export default function App() {
           <SectionTitle eyebrow="SKILLS" title="Core stack." />
           <div className="chaos-grid">
             {chaosSkills.map((gem, index) => (
-              <article key={gem.title} className={`chaos-gem chaos-gem-${index + 1} ${gem.accent}`}>
+              <button
+                key={gem.title}
+                type="button"
+                onClick={() => setActiveGem((prev) => (prev === index ? -1 : index))}
+                aria-pressed={activeGem === index}
+                className={`chaos-gem chaos-gem-${index + 1} ${gem.accent} ${activeGem === index ? "is-active" : ""}`}
+              >
                 <div className="chaos-gem-crystal">
                   <div className="chaos-gem-inner">
                     <h3 className="chaos-gem-title">{gem.title}</h3>
+                    {activeGem === index ? (
+                      <ul className="chaos-skill-list">
+                        {gem.skills.map((skill) => (
+                          <li key={skill}>{skill}</li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p className="chaos-gem-hint">Click to expand</p>
+                    )}
                   </div>
                 </div>
-              </article>
+              </button>
             ))}
           </div>
         </motion.section>
