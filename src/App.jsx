@@ -308,11 +308,13 @@ export default function App() {
         >
           <SectionTitle eyebrow="SKILLS" title="Capabilities across product, backend, cloud, and delivery." />
           <div className="chaos-grid">
-            {chaosSkills.map((gem) => (
-              <article key={gem.title} className={`chaos-gem speed-sheen ${gem.accent}`}>
-                <div className="chaos-gem-inner">
-                  <h3 className="chaos-gem-title">{gem.title}</h3>
-                  <p className="chaos-gem-text">{gem.detail}</p>
+            {chaosSkills.map((gem, index) => (
+              <article key={gem.title} className={`chaos-gem chaos-gem-${index + 1} speed-sheen ${gem.accent}`}>
+                <div className="chaos-gem-crystal">
+                  <div className="chaos-gem-inner">
+                    <h3 className="chaos-gem-title">{gem.title}</h3>
+                    <p className="chaos-gem-text">{gem.detail}</p>
+                  </div>
                 </div>
               </article>
             ))}
