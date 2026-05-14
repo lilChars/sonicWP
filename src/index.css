@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(10, 92, 255, 0.4), transparent 40%),
+    radial-gradient(circle at 86% 76%, rgba(23, 194, 255, 0.24), transparent 44%),
+    linear-gradient(180deg, #061128 0%, #030a18 100%);
+  color: #f4f9ff;
+  background-attachment: fixed;
+}
+
+::selection {
+  background: rgba(42, 245, 193, 0.35);
+  color: #e9fffa;
+}
+
+.glass {
+  @apply border border-white/10 bg-white/5 backdrop-blur-md;
+}
+
+.ring-outline {
+  border: 3px solid #ffc93c;
+  box-shadow: 0 0 0 1px rgba(255, 201, 60, 0.2), 0 0 20px rgba(255, 201, 60, 0.42);
+  border-radius: 9999px;
+}
+
+.speed-sheen {
+  position: relative;
+  overflow: hidden;
+}
+
+.speed-sheen::after {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  background: linear-gradient(110deg, transparent 15%, rgba(255, 255, 255, 0.16) 40%, transparent 72%);
+  transform: translateX(-120%);
+  transition: transform 650ms ease;
+}
+
+.speed-sheen:hover::after {
+  transform: translateX(120%);
+}
+
+#mobile-menu {
+  transition: height 240ms ease, opacity 240ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
