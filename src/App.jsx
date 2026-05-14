@@ -146,12 +146,12 @@ export default function App() {
             whileInView="show"
             viewport={{ once: true, amount: 0.25 }}
           >
-            <p className="mb-4 text-xs font-extrabold tracking-[0.22em] text-skyPulse">SUPER SOFTWARE DEVELOPER</p>
+            <p className="mb-4 text-xs font-extrabold tracking-[0.22em] text-skyPulse">GOTTA GO FAST!</p>
             <h1 className="max-w-[14ch] font-display text-4xl leading-[1.06] text-white sm:text-5xl lg:text-6xl">
-              Backend, cloud, apps, and scalable software.
+              I do it all: backend, frontend, cloud, and more!
             </h1>
             <p className="mt-5 max-w-2xl text-base text-slate-300 sm:text-lg">
-              I design and ship complete software systems, from architecture to production.
+              From designing scalable systems to delivering production-ready solutions, I bring your ideas to life at supersonic speed.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
@@ -294,17 +294,16 @@ export default function App() {
           <SectionTitle eyebrow="SKILLS" title="Core stack." />
           <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
             {skillBlocks.map((block) => (
-              <article
-                key={block.title}
-                className="rounded-2xl border border-white/15 bg-gradient-to-b from-white/10 to-white/5 p-5 shadow-neon"
-              >
-                <h3 className="text-base font-extrabold text-white">{block.title}</h3>
-                <ul className="mt-3 space-y-2 text-sm text-slate-300">
+              <div key={block.title} className="mb-8">
+                <SectionTitle eyebrow="" title={block.title} />
+                <ul className="grid grid-cols-4 gap-4">
                   {block.items.map((item) => (
-                    <li key={item}>• {item}</li>
+                    <li key={item} className="text-center">
+                      <img src={`/icons/${item.toLowerCase()}.svg`} alt={item} className="h-8 w-8 mx-auto" />
+                    </li>
                   ))}
                 </ul>
-              </article>
+              </div>
             ))}
           </div>
 
