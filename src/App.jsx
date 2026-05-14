@@ -323,7 +323,7 @@ export default function App() {
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <a href="mailto:carlosluzumbero@gmail.com" className="rounded-xl bg-gradient-to-r from-cobalt to-skyPulse px-5 py-3 text-sm font-extrabold text-white shadow-neon">
-                  Send Email
+                  carlosluzumbero@gmail.com
                 </a>
                 <a href="https://github.com/lilChars" target="_blank" rel="noreferrer" className="rounded-xl border border-white/20 px-5 py-3 text-sm font-extrabold text-white">
                   GitHub
