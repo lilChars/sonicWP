@@ -273,6 +273,7 @@ export default function App() {
               "JavaScript",
               "Python",
               "C#",
+              "C++",
               "Go",
               "React",
               "Next.js",
